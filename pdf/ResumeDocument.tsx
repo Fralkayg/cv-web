@@ -22,9 +22,18 @@ const styles = StyleSheet.create({
     fontSize: 9.5,
     color: INK,
   },
+  sidebarBackground: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
+    width: '35%',
+    backgroundColor: TEAL,
+  },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
+    backgroundColor: '#ffffff',
     paddingHorizontal: 32,
     paddingTop: 30,
     paddingBottom: 18,
@@ -58,22 +67,21 @@ const styles = StyleSheet.create({
   },
   sidebar: {
     width: '35%',
-    backgroundColor: TEAL,
-    color: '#ffffff',
     paddingHorizontal: 22,
-    paddingTop: 6,
+    paddingTop: 16,
     paddingBottom: 30,
   },
   main: {
     width: '65%',
     paddingHorizontal: 26,
-    paddingTop: 6,
+    paddingTop: 16,
     paddingBottom: 30,
   },
   sidebarSection: { marginBottom: 18 },
   sidebarHeading: {
     fontSize: 10,
     fontFamily: 'Helvetica-Bold',
+    color: '#ffffff',
     textTransform: 'uppercase',
     letterSpacing: 1,
     marginBottom: 9,
@@ -90,6 +98,38 @@ const styles = StyleSheet.create({
     marginBottom: 2,
   },
   sidebarValue: { fontSize: 9.5, fontFamily: 'Helvetica-Bold', color: '#ffffff' },
+  sidebarPillRow: { flexDirection: 'row', flexWrap: 'wrap' },
+  sidebarPillSolid: {
+    fontSize: 7,
+    color: TEAL_DARK,
+    backgroundColor: '#ffffff',
+    borderRadius: 7,
+    paddingHorizontal: 5,
+    paddingVertical: 2,
+    marginRight: 4,
+    marginBottom: 4,
+  },
+  sidebarPillOutline: {
+    fontSize: 7,
+    color: '#ffffff',
+    borderWidth: 0.75,
+    borderColor: 'rgba(255,255,255,0.55)',
+    borderRadius: 7,
+    paddingHorizontal: 5,
+    paddingVertical: 2,
+    marginRight: 4,
+    marginBottom: 4,
+  },
+  sidebarEducationItem: { marginBottom: 10 },
+  sidebarEducationPeriod: {
+    fontSize: 7.5,
+    color: 'rgba(255,255,255,0.75)',
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
+    marginBottom: 2,
+  },
+  sidebarEducationInstitution: { fontSize: 9, fontFamily: 'Helvetica-Bold', color: '#ffffff' },
+  sidebarEducationDegree: { fontSize: 8, color: 'rgba(255,255,255,0.85)', marginTop: 1 },
   mainSection: { marginBottom: 16 },
   mainHeading: {
     fontSize: 11,
@@ -124,26 +164,12 @@ const styles = StyleSheet.create({
     marginRight: 4,
     marginBottom: 4,
   },
-  pillSolid: {
-    fontSize: 7.5,
-    color: '#ffffff',
-    backgroundColor: TEAL,
-    borderRadius: 8,
-    paddingHorizontal: 6,
-    paddingVertical: 2.5,
-    marginRight: 4,
-    marginBottom: 4,
-  },
-  educationRow: { flexDirection: 'row', marginBottom: 8 },
-  educationPeriod: { width: 66, fontSize: 8, fontFamily: 'Helvetica-Bold', color: TEAL_DARK },
-  educationInstitution: { fontSize: 9.5, fontFamily: 'Helvetica-Bold' },
-  educationDegree: { fontSize: 8.5, color: INK_SOFT, marginTop: 1 },
   link: { color: '#ffffff', textDecoration: 'none' },
 })
 
 function SidebarSection({ heading, children }: { heading: string; children: React.ReactNode }) {
   return (
-    <View style={styles.sidebarSection}>
+    <View style={styles.sidebarSection} wrap={false}>
       <Text style={styles.sidebarHeading}>{heading}</Text>
       {children}
     </View>
@@ -188,6 +214,8 @@ export function ResumeDocument({ content, extras, locale }: { content: CVContent
   return (
     <Document title={content.meta.pageTitle} language={locale}>
       <Page size="LETTER" style={styles.page} wrap>
+        <View style={styles.sidebarBackground} fixed />
+
         <View style={styles.header}>
           <View style={styles.avatar}>
             <Text style={styles.avatarText}>{content.initials}</Text>
@@ -241,6 +269,36 @@ export function ResumeDocument({ content, extras, locale }: { content: CVContent
                 </View>
               ))}
             </SidebarSection>
+
+            <SidebarSection heading={extras.sectionTitles.technicalSkills}>
+              <View style={styles.sidebarPillRow}>
+                {extras.technicalSkills.map((skill) => (
+                  <Text key={skill} style={styles.sidebarPillSolid}>
+                    {skill}
+                  </Text>
+                ))}
+              </View>
+            </SidebarSection>
+
+            <SidebarSection heading={extras.sectionTitles.interpersonalSkills}>
+              <View style={styles.sidebarPillRow}>
+                {extras.interpersonalSkills.map((skill) => (
+                  <Text key={skill} style={styles.sidebarPillOutline}>
+                    {skill}
+                  </Text>
+                ))}
+              </View>
+            </SidebarSection>
+
+            <SidebarSection heading={extras.sectionTitles.education}>
+              {extras.education.map((edu) => (
+                <View key={`${edu.institution}-${edu.period}`} style={styles.sidebarEducationItem}>
+                  <Text style={styles.sidebarEducationPeriod}>{edu.period}</Text>
+                  <Text style={styles.sidebarEducationInstitution}>{edu.institution}</Text>
+                  <Text style={styles.sidebarEducationDegree}>{edu.degree}</Text>
+                </View>
+              ))}
+            </SidebarSection>
           </View>
 
           <View style={styles.main}>
@@ -257,41 +315,6 @@ export function ResumeDocument({ content, extras, locale }: { content: CVContent
               <Text style={styles.mainHeading}>{extras.sectionTitles.experience}</Text>
               {content.experience.map((job) => (
                 <JobEntry key={`${job.company}-${job.startDate}`} job={job} locale={locale} content={content} />
-              ))}
-            </View>
-
-            <View style={styles.mainSection} wrap={false}>
-              <Text style={styles.mainHeading}>{extras.sectionTitles.technicalSkills}</Text>
-              <View style={styles.pillRow}>
-                {extras.technicalSkills.map((skill) => (
-                  <Text key={skill} style={styles.pillSolid}>
-                    {skill}
-                  </Text>
-                ))}
-              </View>
-            </View>
-
-            <View style={styles.mainSection} wrap={false}>
-              <Text style={styles.mainHeading}>{extras.sectionTitles.interpersonalSkills}</Text>
-              <View style={styles.pillRow}>
-                {extras.interpersonalSkills.map((skill) => (
-                  <Text key={skill} style={styles.pill}>
-                    {skill}
-                  </Text>
-                ))}
-              </View>
-            </View>
-
-            <View style={styles.mainSection} wrap={false}>
-              <Text style={styles.mainHeading}>{extras.sectionTitles.education}</Text>
-              {extras.education.map((edu) => (
-                <View key={`${edu.institution}-${edu.period}`} style={styles.educationRow}>
-                  <Text style={styles.educationPeriod}>{edu.period}</Text>
-                  <View>
-                    <Text style={styles.educationInstitution}>{edu.institution}</Text>
-                    <Text style={styles.educationDegree}>{edu.degree}</Text>
-                  </View>
-                </View>
               ))}
             </View>
           </View>
