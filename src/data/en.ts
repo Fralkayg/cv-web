@@ -35,6 +35,13 @@ export const en: CVContent = {
     experience: 'Experience',
     contact: "Let's get in touch",
   },
+  duration: {
+    present: 'Present',
+    yearSingular: 'year',
+    yearPlural: 'years',
+    monthSingular: 'month',
+    monthPlural: 'months',
+  },
   summary: [
     'I am a friendly Software Engineer with experience developing enterprise applications. One of the things I enjoy the most about my work is the possibility to understand other people’s problems to then design and develop a solution which allows them to either make their work easier or contributes towards taking important decisions.',
     'While Spanish is my native language I am fluent in English. I consider myself a fast learner with strong troubleshooting and problem solving skills. I work well under pressure and enjoy being part of multidisciplinary teams, also, I take pride, responsibility and commitment to the work I do.',
@@ -43,7 +50,8 @@ export const en: CVContent = {
     {
       company: 'Comscore',
       role: 'Software Engineer II (Remote)',
-      period: 'August 2023 - Present (3 years)',
+      startDate: '2023-08',
+      endDate: null,
       bullets: [
         'Maintain and enhance business-critical enterprise applications, ensuring stability and long-term reliability.',
         'Develop and integrate new features to support evolving business requirements.',
@@ -56,7 +64,8 @@ export const en: CVContent = {
     {
       company: 'Antara Mining Solutions',
       role: 'Software Developer (Remote)',
-      period: 'September 2022 - July 2023 (11 months)',
+      startDate: '2022-09',
+      endDate: '2023-07',
       bullets: [
         'Developed and maintained a .NET Core–based traceability platform for repairable components.',
         'Integrated SAP and Ellipse ERP data to ensure end-to-end visibility.',
@@ -70,7 +79,8 @@ export const en: CVContent = {
     {
       company: 'Nimok',
       role: 'Fullstack Developer (Hybrid)',
-      period: 'January 2020 - September 2022 (2 years 9 months)',
+      startDate: '2020-01',
+      endDate: '2022-09',
       bullets: [
         'Enhanced and integrated features into a .NET Core–based legal services platform, enabling clients to track ongoing cases via web and Xamarin Forms mobile apps (iOS/Android).',
         'Utilized Azure and AWS resources to expand platform capabilities and improve performance.',

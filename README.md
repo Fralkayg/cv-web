@@ -17,6 +17,27 @@ npm run build
 
 Output goes to `dist/`.
 
+## PDF résumés
+
+`public/CV_EN.pdf` and `public/CV_ES.pdf` are generated, not checked in — both
+`npm run dev` and `npm run build` run `npm run generate:pdf` first, which
+renders them from the same content in `src/data/en.ts` / `es.ts` (plus
+PDF-only sections in `pdf/resumeExtras.ts`) using `@react-pdf/renderer`.
+
+Job durations ("3 years", "11 months", ...) are computed from each
+experience entry's `startDate`/`endDate` at generation time (see
+`src/utils/formatPeriod.ts`), so they stay accurate on every rebuild without
+manual edits — including on the website's Experience cards, which use the
+same function.
+
+To regenerate the PDFs on their own:
+
+```bash
+npm run generate:pdf
+```
+
+To change the résumé layout, edit `pdf/ResumeDocument.tsx`.
+
 ## Deployment
 
 Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site and publishes it to GitHub Pages at `https://www.csepulveda.cl/`.

@@ -35,6 +35,13 @@ export const es: CVContent = {
     experience: 'Experiencia',
     contact: 'Hablemos',
   },
+  duration: {
+    present: 'Presente',
+    yearSingular: 'año',
+    yearPlural: 'años',
+    monthSingular: 'mes',
+    monthPlural: 'meses',
+  },
   summary: [
     'Soy un Ingeniero de Software cercano y con experiencia desarrollando aplicaciones empresariales. Una de las cosas que más disfruto de mi trabajo es la posibilidad de entender los problemas de otras personas para luego diseñar y desarrollar una solución que les permita facilitar su trabajo o contribuir a la toma de decisiones importantes.',
     'Si bien el español es mi idioma nativo, tengo un dominio fluido del inglés. Me considero una persona que aprende rápido, con fuertes habilidades de resolución de problemas. Trabajo bien bajo presión y disfruto formar parte de equipos multidisciplinarios; además, actúo con orgullo, responsabilidad y compromiso en el trabajo que realizo.',
@@ -43,7 +50,8 @@ export const es: CVContent = {
     {
       company: 'Comscore',
       role: 'Software Engineer II (Remoto)',
-      period: 'Agosto 2023 - Presente (3 años)',
+      startDate: '2023-08',
+      endDate: null,
       bullets: [
         'Mantener y mejorar aplicaciones empresariales críticas para el negocio, asegurando estabilidad y confiabilidad a largo plazo.',
         'Desarrollar e integrar nuevas funcionalidades para responder a requisitos de negocio en evolución.',
@@ -56,7 +64,8 @@ export const es: CVContent = {
     {
       company: 'Antara Mining Solutions',
       role: 'Desarrollador de Software (Remoto)',
-      period: 'Septiembre 2022 - Julio 2023 (11 meses)',
+      startDate: '2022-09',
+      endDate: '2023-07',
       bullets: [
         'Desarrollé y mantuve una plataforma de trazabilidad basada en .NET Core para componentes reparables.',
         'Integré datos de los ERP SAP y Ellipse para asegurar visibilidad de extremo a extremo.',
@@ -70,7 +79,8 @@ export const es: CVContent = {
     {
       company: 'Nimok',
       role: 'Desarrollador Fullstack (Híbrido)',
-      period: 'Enero 2020 - Septiembre 2022 (2 años 9 meses)',
+      startDate: '2020-01',
+      endDate: '2022-09',
       bullets: [
         'Mejoré e integré funcionalidades en una plataforma de servicios legales basada en .NET Core, permitiendo a los clientes hacer seguimiento de sus casos vía web y aplicaciones móviles en Xamarin Forms (iOS/Android).',
         'Utilicé recursos de Azure y AWS para ampliar las capacidades de la plataforma y mejorar su rendimiento.',

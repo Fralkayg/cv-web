@@ -17,13 +17,14 @@ import MenuRoundedIcon from '@mui/icons-material/MenuRounded'
 import LanguageSwitch from './LanguageSwitch'
 import ThemeToggle from './ThemeToggle'
 import { useLanguage } from '../context/LanguageContext'
+import { getPdfHref } from '../utils/pdfHref'
 import { heroGradient } from '../theme'
 
 export default function NavBar() {
-  const { t } = useLanguage()
+  const { t, locale } = useLanguage()
   const [open, setOpen] = useState(false)
 
-  const pdfHref = `${import.meta.env.BASE_URL}CV_EN.pdf`
+  const pdfHref = getPdfHref(locale)
 
   const navItems = [
     { href: '#summary', label: t.nav.summary },

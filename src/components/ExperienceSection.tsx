@@ -15,10 +15,11 @@ import CheckRoundedIcon from '@mui/icons-material/CheckRounded'
 import WorkRoundedIcon from '@mui/icons-material/WorkRounded'
 import SectionHeading from './SectionHeading'
 import { useLanguage } from '../context/LanguageContext'
+import { formatPeriod } from '../utils/formatPeriod'
 import { parseTechnologies } from '../utils/parseTechnologies'
 
 export default function ExperienceSection() {
-  const { t } = useLanguage()
+  const { t, locale } = useLanguage()
 
   return (
     <Box component="section" id="experience" sx={{ bgcolor: 'background.paper', py: { xs: 6, md: 9 } }}>
@@ -28,7 +29,7 @@ export default function ExperienceSection() {
         <Stack spacing={3}>
           {t.experience.map((job) => (
             <Card
-              key={`${job.company}-${job.period}`}
+              key={`${job.company}-${job.startDate}`}
               variant="outlined"
               sx={{
                 borderLeft: '4px solid',
@@ -61,7 +62,7 @@ export default function ExperienceSection() {
                         {job.company}
                       </Typography>
                       <Typography variant="caption" sx={{ fontWeight: 700, color: 'primary.main', whiteSpace: 'nowrap' }}>
-                        {job.period}
+                        {formatPeriod(job, locale, t.duration)}
                       </Typography>
                     </Stack>
                     <Typography variant="subtitle2" color="text.secondary" sx={{ fontStyle: 'italic' }}>

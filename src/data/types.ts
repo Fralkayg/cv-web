@@ -1,9 +1,20 @@
 export interface ExperienceEntry {
   company: string
   role: string
-  period: string
+  /** ISO 'YYYY-MM'. */
+  startDate: string
+  /** ISO 'YYYY-MM', or null if this is the current job. */
+  endDate: string | null
   bullets: string[]
   technologies: string
+}
+
+export interface DurationLabels {
+  present: string
+  yearSingular: string
+  yearPlural: string
+  monthSingular: string
+  monthPlural: string
 }
 
 export interface CVContent {
@@ -45,4 +56,5 @@ export interface CVContent {
   experience: ExperienceEntry[]
   technologiesLabel: string
   contactMessage: string
+  duration: DurationLabels
 }
