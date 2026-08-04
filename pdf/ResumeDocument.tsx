@@ -21,6 +21,11 @@ const styles = StyleSheet.create({
     fontFamily: 'Helvetica',
     fontSize: 9.5,
     color: INK,
+    // Page padding (unlike a View's) repeats on every page, giving each
+    // continuation page the same breathing room at the top/bottom instead of
+    // content butting straight up against the physical page edge.
+    paddingTop: 24,
+    paddingBottom: 28,
   },
   sidebarBackground: {
     position: 'absolute',
@@ -34,6 +39,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#ffffff',
+    // Cancels the page's paddingTop so this box's white background starts at
+    // the true page edge, fully masking the fixed teal sidebar layer behind
+    // it (only the first page reaches this element, since it isn't repeated).
+    marginTop: -24,
     paddingHorizontal: 32,
     paddingTop: 30,
     paddingBottom: 18,
@@ -68,14 +77,12 @@ const styles = StyleSheet.create({
   sidebar: {
     width: '35%',
     paddingHorizontal: 22,
-    paddingTop: 16,
-    paddingBottom: 30,
+    paddingTop: 10,
   },
   main: {
     width: '65%',
     paddingHorizontal: 26,
-    paddingTop: 16,
-    paddingBottom: 30,
+    paddingTop: 10,
   },
   sidebarSection: { marginBottom: 18 },
   sidebarHeading: {
@@ -100,23 +107,24 @@ const styles = StyleSheet.create({
   sidebarValue: { fontSize: 9.5, fontFamily: 'Helvetica-Bold', color: '#ffffff' },
   sidebarPillRow: { flexDirection: 'row', flexWrap: 'wrap' },
   sidebarPillSolid: {
-    fontSize: 7,
+    fontSize: 7.5,
+    fontFamily: 'Helvetica-Bold',
     color: TEAL_DARK,
     backgroundColor: '#ffffff',
     borderRadius: 7,
-    paddingHorizontal: 5,
-    paddingVertical: 2,
+    paddingHorizontal: 5.5,
+    paddingVertical: 3,
     marginRight: 4,
     marginBottom: 4,
   },
   sidebarPillOutline: {
-    fontSize: 7,
+    fontSize: 7.5,
+    fontFamily: 'Helvetica-Bold',
     color: '#ffffff',
-    borderWidth: 0.75,
-    borderColor: 'rgba(255,255,255,0.55)',
+    backgroundColor: 'rgba(255,255,255,0.2)',
     borderRadius: 7,
-    paddingHorizontal: 5,
-    paddingVertical: 2,
+    paddingHorizontal: 5.5,
+    paddingVertical: 3,
     marginRight: 4,
     marginBottom: 4,
   },
