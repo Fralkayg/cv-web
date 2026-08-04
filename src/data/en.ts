@@ -10,7 +10,7 @@ export const en: CVContent = {
   initials: 'CS',
   contact: {
     emailLabel: 'Email',
-    email: 'csepulvedav@outlook.com',
+    email: 'hello@csepulveda.cl',
     locationLabel: 'Location',
     location: 'Santiago, Chile',
     linkedinLabel: 'LinkedIn',
