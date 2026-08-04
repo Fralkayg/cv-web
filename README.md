@@ -19,6 +19,8 @@ Output goes to `dist/`.
 
 ## Deployment
 
-Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site and publishes it to GitHub Pages at `https://<username>.github.io/cv-web/`.
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site and publishes it to GitHub Pages at `https://www.csepulveda.cl/`.
 
 To enable it the first time: repo **Settings → Pages → Source → GitHub Actions**.
+
+The custom domain is set via `public/CNAME`, which Vite copies into `dist/` on every build. Keep it in the repo — GitHub Actions deployments replace the whole published artifact each time, so without this file the next deploy would silently drop the custom domain.

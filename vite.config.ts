@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// Base path matches the GitHub Pages project URL: https://<user>.github.io/cv-web/
+// Served from a custom domain at the root (https://www.csepulveda.cl/), not a
+// GitHub Pages project subpath, so assets resolve from '/'.
 export default defineConfig({
-  base: '/cv-web/',
+  base: '/',
   plugins: [react()],
 })
