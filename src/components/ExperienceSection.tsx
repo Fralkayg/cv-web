@@ -12,7 +12,8 @@ import ListItemText from '@mui/material/ListItemText'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
 import CheckRoundedIcon from '@mui/icons-material/CheckRounded'
-import WorkRoundedIcon from '@mui/icons-material/WorkRounded'
+import CodeRoundedIcon from '@mui/icons-material/CodeRounded'
+import TerminalRoundedIcon from '@mui/icons-material/TerminalRounded'
 import SectionHeading from './SectionHeading'
 import { useLanguage } from '../context/LanguageContext'
 import { formatPeriod } from '../utils/formatPeriod'
@@ -50,7 +51,7 @@ export default function ExperienceSection() {
                     variant="rounded"
                     sx={{ bgcolor: 'rgba(14,124,134,0.1)', color: 'primary.main', width: 44, height: 44 }}
                   >
-                    <WorkRoundedIcon />
+                    <CodeRoundedIcon />
                   </Avatar>
                   <Box sx={{ flexGrow: 1, minWidth: 0 }}>
                     <Stack
@@ -87,9 +88,12 @@ export default function ExperienceSection() {
 
                 <Divider sx={{ mb: 1.5 }} />
 
-                <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mb: 1 }}>
-                  {t.technologiesLabel}
-                </Typography>
+                <Stack direction="row" spacing={0.5} sx={{ alignItems: 'center', mb: 1 }}>
+                  <TerminalRoundedIcon sx={{ fontSize: 14 }} color="primary" />
+                  <Typography variant="caption" color="text.secondary">
+                    {t.technologiesLabel}
+                  </Typography>
+                </Stack>
                 <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: 'wrap' }}>
                   {parseTechnologies(job.technologies).map((tech) => (
                     <Chip key={tech} label={tech} size="small" variant="outlined" color="primary" />

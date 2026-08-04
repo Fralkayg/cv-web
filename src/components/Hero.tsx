@@ -4,8 +4,8 @@ import Button from '@mui/material/Button'
 import Container from '@mui/material/Container'
 import Stack from '@mui/material/Stack'
 import Typography from '@mui/material/Typography'
+import CodeRoundedIcon from '@mui/icons-material/CodeRounded'
 import SendRoundedIcon from '@mui/icons-material/SendRounded'
-import WorkRoundedIcon from '@mui/icons-material/WorkRounded'
 import { useLanguage } from '../context/LanguageContext'
 import { heroGradient } from '../theme'
 
@@ -94,7 +94,7 @@ export default function Hero() {
           spacing={2}
           sx={{ justifyContent: 'center', alignItems: 'center' }}
         >
-          <Button variant="contained" size="large" startIcon={<WorkRoundedIcon />} href="#experience">
+          <Button variant="contained" size="large" startIcon={<CodeRoundedIcon />} href="#experience">
             {t.nav.viewExperience}
           </Button>
           <Button variant="outlined" size="large" startIcon={<SendRoundedIcon />} href="#contact">
