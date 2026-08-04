@@ -56,5 +56,6 @@ export interface CVContent {
   experience: ExperienceEntry[]
   technologiesLabel: string
   contactMessage: string
+  qrCaption: string
   duration: DurationLabels
 }

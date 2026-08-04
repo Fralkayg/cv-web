@@ -95,4 +95,5 @@ export const es: CVContent = {
   technologiesLabel: 'Principales tecnologías utilizadas:',
   contactMessage:
     '¿Tienes un proyecto en mente o solo andas curioseando? De cualquier forma, escríbeme — siempre estoy para una buena conversación.',
+  qrCaption: 'Escanea para visitar esta página',
 }

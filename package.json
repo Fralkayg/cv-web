@@ -4,9 +4,11 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "npm run generate:pdf && vite",
-    "build": "npm run generate:pdf && tsc -b && vite build",
+    "dev": "npm run generate:assets && vite",
+    "build": "npm run generate:assets && tsc -b && vite build",
+    "generate:assets": "npm run generate:pdf && npm run generate:qr",
     "generate:pdf": "tsc --noEmit -p pdf/tsconfig.json && tsx pdf/generate.tsx",
+    "generate:qr": "tsx scripts/generate-qr.ts",
     "preview": "vite preview",
     "lint": "eslint ."
   },
@@ -21,9 +23,11 @@
   "devDependencies": {
     "@react-pdf/renderer": "^4.5.1",
     "@types/node": "^26.1.2",
+    "@types/qrcode": "^1.5.6",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.4",
+    "qrcode": "^1.5.4",
     "tsx": "^4.23.5",
     "typescript": "^5.6.3",
     "vite": "^5.4.11"

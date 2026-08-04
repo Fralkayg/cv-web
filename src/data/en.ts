@@ -95,4 +95,5 @@ export const en: CVContent = {
   technologiesLabel: 'Main technologies used:',
   contactMessage:
     "Got a project in mind, or just poking around? Either way, drop me a line I'm always up for a good conversation.",
+  qrCaption: 'Scan to visit this page',
 }

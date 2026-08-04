@@ -38,6 +38,13 @@ npm run generate:pdf
 
 To change the résumé layout, edit `pdf/ResumeDocument.tsx`.
 
+## QR code
+
+`public/qr-cv.png` is also generated (not checked in), pointing at
+`https://www.csepulveda.cl/`. It's embedded in the Contact section and can
+also be saved straight from the live site for printing or sharing elsewhere.
+To change the target URL or styling, edit `scripts/generate-qr.ts`.
+
 ## Deployment
 
 Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site and publishes it to GitHub Pages at `https://www.csepulveda.cl/`.

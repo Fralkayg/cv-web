@@ -32,6 +32,28 @@ export default function ContactSection() {
             variant="outlined"
             sx={{ bgcolor: 'background.paper' }}
           />
+
+          <Box
+            sx={{
+              mt: 1,
+              p: 1.5,
+              bgcolor: '#ffffff',
+              border: '1px solid',
+              borderColor: 'divider',
+              borderRadius: 2,
+              boxShadow: 1,
+            }}
+          >
+            <Box
+              component="img"
+              src={`${import.meta.env.BASE_URL}qr-cv.png`}
+              alt={t.qrCaption}
+              sx={{ width: 128, height: 128, display: 'block' }}
+            />
+          </Box>
+          <Typography variant="caption" color="text.secondary">
+            {t.qrCaption}
+          </Typography>
         </Stack>
       </Container>
     </Box>
