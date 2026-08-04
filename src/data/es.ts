@@ -14,7 +14,7 @@ export const es: CVContent = {
     locationLabel: 'Ubicación',
     location: 'Santiago, Chile',
     linkedinLabel: 'LinkedIn',
-    linkedinUrl: 'https://www.linkedin.com/in/christiansepulveda',
+    linkedinUrl: 'https://www.linkedin.com/in/christian-sepulveda/',
     githubLabel: 'GitHub',
     githubUrl: 'https://github.com/Fralkayg',
   },
