@@ -12,7 +12,7 @@ export default function NowSection() {
 
   return (
     <Box component="section" id="now" sx={{ py: { xs: 6, md: 9 } }}>
-      <Container maxWidth="md">
+      <Container maxWidth="lg">
         <SectionHeading title={t.sectionTitles.now} />
 
         <Paper variant="outlined" sx={{ p: 3 }}>

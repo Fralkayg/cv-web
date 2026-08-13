@@ -12,7 +12,7 @@ export default function ContactSection() {
 
   return (
     <Box component="section" id="contact" sx={{ py: { xs: 7, md: 10 } }}>
-      <Container maxWidth="sm" sx={{ textAlign: 'center' }}>
+      <Container maxWidth="md" sx={{ textAlign: 'center' }}>
         <Typography variant="h4" component="h2" sx={{ fontWeight: 800, mb: 2.5 }}>
           {t.sectionTitles.contact}
         </Typography>

@@ -11,7 +11,7 @@ export default function Footer() {
 
   return (
     <Box component="footer" sx={{ bgcolor: 'primary.dark', color: 'common.white', py: 4 }}>
-      <Container maxWidth="md">
+      <Container maxWidth="lg">
         <Stack
           direction={{ xs: 'column', sm: 'row' }}
           spacing={2}

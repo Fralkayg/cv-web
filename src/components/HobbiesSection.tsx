@@ -26,7 +26,7 @@ export default function HobbiesSection() {
 
   return (
     <Box component="section" id="hobbies" sx={{ bgcolor: 'background.paper', py: { xs: 6, md: 9 } }}>
-      <Container maxWidth="md">
+      <Container maxWidth="lg">
         <SectionHeading title={t.sectionTitles.hobbies} />
 
         <Grid container spacing={2}>

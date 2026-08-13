@@ -17,17 +17,6 @@ export interface DurationLabels {
   monthPlural: string
 }
 
-export interface EducationEntry {
-  period: string
-  institution: string
-  degree: string
-}
-
-export interface Certificate {
-  name: string
-  period: string
-}
-
 export interface ProjectEntry {
   title: string
   description: string
@@ -75,12 +64,7 @@ export interface CVContent {
   sectionTitles: {
     summary: string
     experience: string
-    skills: string
-    technicalSkills: string
-    interpersonalSkills: string
     projects: string
-    education: string
-    certificates: string
     testimonials: string
     now: string
     hobbies: string
@@ -90,11 +74,7 @@ export interface CVContent {
   experience: ExperienceEntry[]
   technologiesLabel: string
   viewProjectLabel: string
-  technicalSkills: string[]
-  interpersonalSkills: string[]
   projects: ProjectEntry[]
-  education: EducationEntry[]
-  certificates: Certificate[]
   testimonials: Testimonial[]
   nowItems: string[]
   hobbies: string[]

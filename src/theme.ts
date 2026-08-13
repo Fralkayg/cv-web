@@ -6,6 +6,9 @@ const shared = {
   },
   typography: {
     fontFamily: '"Segoe UI", system-ui, Roboto, Helvetica, Arial, sans-serif',
+    // Slightly above MUI's default (14) so body/caption text reads bigger
+    // site-wide; every variant scales proportionally from this.
+    fontSize: 15,
     h1: { fontWeight: 800, letterSpacing: '-0.02em' },
     h2: { fontWeight: 800, letterSpacing: '-0.02em' },
     h3: { fontWeight: 700 },

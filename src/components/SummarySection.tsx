@@ -10,7 +10,7 @@ export default function SummarySection() {
 
   return (
     <Box component="section" id="summary" sx={{ py: { xs: 6, md: 9 } }}>
-      <Container maxWidth="md">
+      <Container maxWidth="lg">
         <SectionHeading title={t.sectionTitles.summary} />
         <Stack spacing={2.5}>
           {t.summary.map((paragraph, i) => (

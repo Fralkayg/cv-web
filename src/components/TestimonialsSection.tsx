@@ -15,7 +15,7 @@ export default function TestimonialsSection() {
 
   return (
     <Box component="section" id="testimonials" sx={{ bgcolor: 'background.paper', py: { xs: 6, md: 9 } }}>
-      <Container maxWidth="md">
+      <Container maxWidth="lg">
         <SectionHeading title={t.sectionTitles.testimonials} />
 
         <Grid container spacing={3}>

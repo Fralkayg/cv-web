@@ -43,7 +43,7 @@ export default function Hero() {
         }}
       />
 
-      <Container maxWidth="md" sx={{ position: 'relative', textAlign: 'center', pt: { xs: 9, md: 13 }, pb: { xs: 7, md: 9 } }}>
+      <Container maxWidth="lg" sx={{ position: 'relative', textAlign: 'center', pt: { xs: 9, md: 13 }, pb: { xs: 7, md: 9 } }}>
         <Avatar
           sx={{
             width: 92,

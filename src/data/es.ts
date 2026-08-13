@@ -34,12 +34,7 @@ export const es: CVContent = {
   sectionTitles: {
     summary: 'Resumen',
     experience: 'Experiencia',
-    skills: 'Habilidades',
-    technicalSkills: 'Técnicas',
-    interpersonalSkills: 'Interpersonales',
     projects: 'Proyectos Destacados',
-    education: 'Educación',
-    certificates: 'Certificados',
     testimonials: 'Testimonios',
     now: 'En Qué Estoy',
     hobbies: 'Pasatiempos e Intereses',
@@ -104,37 +99,6 @@ export const es: CVContent = {
   ],
   technologiesLabel: 'Principales tecnologías utilizadas:',
   viewProjectLabel: 'Ver proyecto',
-  technicalSkills: [
-    '.NET Core',
-    '.NET Framework',
-    'C#',
-    'Xamarin Forms',
-    'APIs',
-    'Bases de datos relacionales y no relacionales',
-    'Microsoft Azure',
-    'Azure DevOps',
-    'Metodología SCRUM',
-    'Entity Framework',
-    'Identity',
-    'HTML',
-    'CSS',
-    'JavaScript',
-    'CI/CD',
-    'Python',
-    'C/C++',
-    'Docker',
-  ],
-  interpersonalSkills: [
-    'Aprendizaje rápido',
-    'Resolución de problemas',
-    'Trabajo en equipo',
-    'Responsabilidad',
-    'Disposición a aprender',
-    'Adaptabilidad',
-    'Independencia',
-    'Motivación',
-    'Gestión del tiempo',
-  ],
   // TODO(usuario): reemplazar con proyectos reales.
   projects: [
     {
@@ -152,19 +116,6 @@ export const es: CVContent = {
       link: '#',
     },
   ],
-  education: [
-    {
-      period: '2017 - 2022',
-      institution: 'Universidad Técnica Federico Santa María',
-      degree: 'Licenciatura en Ciencias de la Ingeniería / Ingeniería Civil Informática',
-    },
-    {
-      period: '2013 - 2016',
-      institution: 'Universidad Técnica Federico Santa María',
-      degree: 'Técnico en Informática',
-    },
-  ],
-  certificates: [{ name: 'Test of English for International Communication (TOEIC) - C1', period: '2023' }],
   // TODO(usuario): reemplazar con testimonios reales (solo usar citas con permiso para publicarlas).
   testimonials: [
     {

@@ -15,8 +15,8 @@ export default function ProjectsSection() {
   const { t } = useLanguage()
 
   return (
-    <Box component="section" id="projects" sx={{ bgcolor: 'background.paper', py: { xs: 6, md: 9 } }}>
-      <Container maxWidth="md">
+    <Box component="section" id="projects" sx={{ py: { xs: 6, md: 9 } }}>
+      <Container maxWidth="lg">
         <SectionHeading title={t.sectionTitles.projects} />
 
         <Grid container spacing={3}>

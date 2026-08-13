@@ -24,7 +24,7 @@ export default function ExperienceSection() {
 
   return (
     <Box component="section" id="experience" sx={{ bgcolor: 'background.paper', py: { xs: 6, md: 9 } }}>
-      <Container maxWidth="md">
+      <Container maxWidth="lg">
         <SectionHeading title={t.sectionTitles.experience} />
 
         <Stack spacing={3}>
@@ -74,13 +74,13 @@ export default function ExperienceSection() {
 
                 <List dense disablePadding sx={{ mb: 1.5 }}>
                   {job.bullets.map((bullet, i) => (
-                    <ListItem key={i} disableGutters alignItems="flex-start" sx={{ py: 0.4 }}>
-                      <ListItemIcon sx={{ minWidth: 28, mt: '3px' }}>
+                    <ListItem key={i} disableGutters alignItems="flex-start" sx={{ py: 0.6 }}>
+                      <ListItemIcon sx={{ minWidth: 30, mt: '4px' }}>
                         <CheckRoundedIcon fontSize="small" color="primary" />
                       </ListItemIcon>
                       <ListItemText
                         primary={bullet}
-                        slotProps={{ primary: { variant: 'body2', color: 'text.secondary' } }}
+                        slotProps={{ primary: { variant: 'body1', color: 'text.secondary' } }}
                       />
                     </ListItem>
                   ))}
@@ -96,7 +96,7 @@ export default function ExperienceSection() {
                 </Stack>
                 <Stack direction="row" spacing={1} useFlexGap sx={{ flexWrap: 'wrap' }}>
                   {parseTechnologies(job.technologies).map((tech) => (
-                    <Chip key={tech} label={tech} size="small" variant="outlined" color="primary" />
+                    <Chip key={tech} label={tech} variant="outlined" color="primary" />
                   ))}
                 </Stack>
               </CardContent>
