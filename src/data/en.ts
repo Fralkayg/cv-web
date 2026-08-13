@@ -21,6 +21,7 @@ export const en: CVContent = {
   nav: {
     summary: 'Summary',
     experience: 'Experience',
+    projects: 'Projects',
     contact: 'Contact',
     viewExperience: 'See my experience',
   },
@@ -33,6 +34,15 @@ export const en: CVContent = {
   sectionTitles: {
     summary: 'Summary',
     experience: 'Experience',
+    skills: 'Skills',
+    technicalSkills: 'Technical',
+    interpersonalSkills: 'Interpersonal',
+    projects: 'Featured Projects',
+    education: 'Education',
+    certificates: 'Certificates',
+    testimonials: 'Testimonials',
+    now: "What I'm Up To",
+    hobbies: 'Hobbies & Interests',
     contact: "Let's get in touch",
   },
   duration: {
@@ -93,6 +103,83 @@ export const en: CVContent = {
     },
   ],
   technologiesLabel: 'Main technologies used:',
+  viewProjectLabel: 'View project',
+  technicalSkills: [
+    '.NET Core',
+    '.NET Framework',
+    'C#',
+    'Xamarin Forms',
+    'APIs',
+    'Relational and non-relational databases',
+    'Microsoft Azure',
+    'Azure DevOps',
+    'SCRUM Methodology',
+    'Entity Framework',
+    'Identity',
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'CI/CD',
+    'Python',
+    'C/C++',
+    'Docker',
+  ],
+  interpersonalSkills: [
+    'Fast learner',
+    'Problem-solving',
+    'Teamwork',
+    'Accountability',
+    'Willingness to learn',
+    'Adaptability',
+    'Independence',
+    'Motivation',
+    'Time management',
+  ],
+  // TODO(user): replace with real projects.
+  projects: [
+    {
+      title: 'Project Name',
+      description:
+        'Short description of the problem this solves and your role in building it — replace me.',
+      tech: ['Tech 1', 'Tech 2'],
+      link: '#',
+    },
+    {
+      title: 'Project Name',
+      description:
+        'Short description of the problem this solves and your role in building it — replace me.',
+      tech: ['Tech 1', 'Tech 2'],
+      link: '#',
+    },
+  ],
+  education: [
+    {
+      period: '2017 - 2022',
+      institution: 'Universidad Técnica Federico Santa María',
+      degree: 'Bachelor of Science in Computer Engineering',
+    },
+    {
+      period: '2013 - 2016',
+      institution: 'Universidad Técnica Federico Santa María',
+      degree: 'Technician in Computer Science',
+    },
+  ],
+  certificates: [{ name: 'Test of English for International Communication (TOEIC) - C1', period: '2023' }],
+  // TODO(user): replace with real testimonials (only use quotes you have permission to publish).
+  testimonials: [
+    {
+      quote: 'Placeholder quote — replace with a real testimonial.',
+      name: 'Full Name',
+      role: 'Role, Company',
+    },
+    {
+      quote: 'Placeholder quote — replace with a real testimonial.',
+      name: 'Full Name',
+      role: 'Role, Company',
+    },
+  ],
+  nowItems: ['Learning piano', 'Improving my frontend skills'],
+  hobbies: ['Formula 1', 'UFC', 'Tennis', 'Traveling', 'Reading'],
   contactMessage:
     "Got a project in mind, or just poking around? Either way, drop me a line I'm always up for a good conversation.",
   qrCaption: 'Scan to visit this page',

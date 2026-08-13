@@ -21,6 +21,7 @@ export const es: CVContent = {
   nav: {
     summary: 'Resumen',
     experience: 'Experiencia',
+    projects: 'Proyectos',
     contact: 'Contacto',
     viewExperience: 'Ver mi experiencia',
   },
@@ -33,6 +34,15 @@ export const es: CVContent = {
   sectionTitles: {
     summary: 'Resumen',
     experience: 'Experiencia',
+    skills: 'Habilidades',
+    technicalSkills: 'Técnicas',
+    interpersonalSkills: 'Interpersonales',
+    projects: 'Proyectos Destacados',
+    education: 'Educación',
+    certificates: 'Certificados',
+    testimonials: 'Testimonios',
+    now: 'En Qué Estoy',
+    hobbies: 'Pasatiempos e Intereses',
     contact: 'Hablemos',
   },
   duration: {
@@ -93,6 +103,83 @@ export const es: CVContent = {
     },
   ],
   technologiesLabel: 'Principales tecnologías utilizadas:',
+  viewProjectLabel: 'Ver proyecto',
+  technicalSkills: [
+    '.NET Core',
+    '.NET Framework',
+    'C#',
+    'Xamarin Forms',
+    'APIs',
+    'Bases de datos relacionales y no relacionales',
+    'Microsoft Azure',
+    'Azure DevOps',
+    'Metodología SCRUM',
+    'Entity Framework',
+    'Identity',
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'CI/CD',
+    'Python',
+    'C/C++',
+    'Docker',
+  ],
+  interpersonalSkills: [
+    'Aprendizaje rápido',
+    'Resolución de problemas',
+    'Trabajo en equipo',
+    'Responsabilidad',
+    'Disposición a aprender',
+    'Adaptabilidad',
+    'Independencia',
+    'Motivación',
+    'Gestión del tiempo',
+  ],
+  // TODO(usuario): reemplazar con proyectos reales.
+  projects: [
+    {
+      title: 'Nombre del Proyecto',
+      description:
+        'Breve descripción del problema que resuelve y tu rol al construirlo — reemplázame.',
+      tech: ['Tecnología 1', 'Tecnología 2'],
+      link: '#',
+    },
+    {
+      title: 'Nombre del Proyecto',
+      description:
+        'Breve descripción del problema que resuelve y tu rol al construirlo — reemplázame.',
+      tech: ['Tecnología 1', 'Tecnología 2'],
+      link: '#',
+    },
+  ],
+  education: [
+    {
+      period: '2017 - 2022',
+      institution: 'Universidad Técnica Federico Santa María',
+      degree: 'Licenciatura en Ciencias de la Ingeniería / Ingeniería Civil Informática',
+    },
+    {
+      period: '2013 - 2016',
+      institution: 'Universidad Técnica Federico Santa María',
+      degree: 'Técnico en Informática',
+    },
+  ],
+  certificates: [{ name: 'Test of English for International Communication (TOEIC) - C1', period: '2023' }],
+  // TODO(usuario): reemplazar con testimonios reales (solo usar citas con permiso para publicarlas).
+  testimonials: [
+    {
+      quote: 'Cita de ejemplo — reemplazar con un testimonio real.',
+      name: 'Nombre Completo',
+      role: 'Cargo, Empresa',
+    },
+    {
+      quote: 'Cita de ejemplo — reemplazar con un testimonio real.',
+      name: 'Nombre Completo',
+      role: 'Cargo, Empresa',
+    },
+  ],
+  nowItems: ['Aprendiendo piano', 'Mejorando mis habilidades de frontend'],
+  hobbies: ['Fórmula 1', 'UFC', 'Tenis', 'Viajar', 'Lectura'],
   contactMessage:
     '¿Tienes un proyecto en mente o solo andas curioseando? De cualquier forma, escríbeme — siempre estoy para una buena conversación.',
   qrCaption: 'Escanea para visitar esta página',

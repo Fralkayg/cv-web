@@ -17,6 +17,30 @@ export interface DurationLabels {
   monthPlural: string
 }
 
+export interface EducationEntry {
+  period: string
+  institution: string
+  degree: string
+}
+
+export interface Certificate {
+  name: string
+  period: string
+}
+
+export interface ProjectEntry {
+  title: string
+  description: string
+  tech: string[]
+  link?: string
+}
+
+export interface Testimonial {
+  quote: string
+  name: string
+  role: string
+}
+
 export interface CVContent {
   meta: {
     htmlLang: string
@@ -38,6 +62,7 @@ export interface CVContent {
   nav: {
     summary: string
     experience: string
+    projects: string
     contact: string
     viewExperience: string
   }
@@ -50,11 +75,29 @@ export interface CVContent {
   sectionTitles: {
     summary: string
     experience: string
+    skills: string
+    technicalSkills: string
+    interpersonalSkills: string
+    projects: string
+    education: string
+    certificates: string
+    testimonials: string
+    now: string
+    hobbies: string
     contact: string
   }
   summary: string[]
   experience: ExperienceEntry[]
   technologiesLabel: string
+  viewProjectLabel: string
+  technicalSkills: string[]
+  interpersonalSkills: string[]
+  projects: ProjectEntry[]
+  education: EducationEntry[]
+  certificates: Certificate[]
+  testimonials: Testimonial[]
+  nowItems: string[]
+  hobbies: string[]
   contactMessage: string
   qrCaption: string
   duration: DurationLabels
